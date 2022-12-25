@@ -14,7 +14,6 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 ALLOWED_HOSTS = ["*"]
 
 SECRET_KEY = env('SECRET_KEY')
-print(SECRET_KEY, "_________________________________")
 # SECURITY WARNING: don't run with debug turned on in production!
 
 DEBUG = env('DEBUG')
@@ -36,7 +35,7 @@ THIRD_APPS = [
 ]
 
 MY_APPS = [
-    
+    'products',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + MY_APPS + THIRD_APPS
@@ -56,7 +55,7 @@ ROOT_URLCONF = 'crud_ecomerse.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
