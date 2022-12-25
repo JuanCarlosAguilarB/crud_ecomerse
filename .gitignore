@@ -706,3 +706,10 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/python,django,visualstudio,windows,linux,venv,dotenv
+
+
+# ignore migrations fo django
+
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
