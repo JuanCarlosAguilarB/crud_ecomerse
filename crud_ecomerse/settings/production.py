@@ -1,5 +1,5 @@
 from crud_ecomerse.settings.base import *
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['crud-mvt.onrender.com']
 
 
