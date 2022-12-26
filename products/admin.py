@@ -1,3 +1,7 @@
+# Django
 from django.contrib import admin
 
-# Register your models here.
+# Apps
+from .models import Fruits
+
+admin.site.register(Fruits)

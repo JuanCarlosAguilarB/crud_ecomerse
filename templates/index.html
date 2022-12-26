@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Django crud</title>
+</head>
+<body>
+    
+    <div class="container abs-center mt-5 pt-5"> 
+        <table style="center" class="table">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Description</th>
+            <th scope="col"> img </th>
+            <th scope="col"> Options </th>
+
+          </tr>
+        </thead>
+        <tbody>
+            {% for fruit in fruits %}
+            <tr>
+                <th scope="col">{{fruit.id}}</th>
+                <th scope="col">{{fruit.name}}</th>
+                <th scope="col">{{fruit.price}}</th>
+                <th scope="col">
+                    {% if  fruit.descriptions %}    
+                        {{fruit.descriptions}}
+                    {%else %}
+                    No description yet
+                    {% endif %}
+                </th>
+                <th scope="col"> img </th>
+                <th scope="col"> 
+                    <a href="{{fruit.id}}/update/" class="btn btn-outline-primary" role="button">Edit</a>
+                    <a href="{{fruit.id}}/delete/" class="btn btn-outline-danger" role="button">Delete</a>
+                </th>
+
+            </tr>
+            {% empty %}
+                <li>No articles yet.</li>
+            {% endfor %}
+
+        </tbody>
+    </table> 
+
+    <a href="/register" class="btn btn-outline-dark" role="button">Add product</a>
+</div>
+
+    
+    
+
+
+</body>
+</html>
+

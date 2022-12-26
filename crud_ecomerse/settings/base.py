@@ -122,3 +122,14 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+ 
+# La URL para los archivos Estáticos (CSS, JS, Imágenes, etc.)
+STATIC_URL = '/static/' 
+ 
+# Las rutas para las imágenes de cada registro o postre 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+ 

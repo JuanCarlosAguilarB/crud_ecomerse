@@ -29,6 +29,9 @@ class Fruits(Products):
     
     photo = models.ImageField( upload_to=user_directory_path,blank=True, null=True) 
     
+    def __str__(self):
+        return self.name
+    
     @property
     def get_photo_url(self):
         if self.photo:

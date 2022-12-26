@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Django crud</title>
+</head>
+<body>
+    
+    <div class="container abs-center mt-5 pt-5"> 
+
+        <form   method="post">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="name">Fruit name</label>
+              <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Enter fruit name">
+            </div>
+           
+            <div class="form-group">
+              <label for="price">Price</label>
+              <input type="number" class="form-control" name="price" placeholder="Enter fruit price">
+            </div>
+
+            <div class="form-group">
+                <label for="descriptions">Description</label>
+                <textarea class="form-control" id="descriptions" rows="3" name='descriptions'></textarea>
+            </div>
+            
+              <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+        {% comment %} <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Send message">
+        </form> {% endcomment %}
+</div>
+
+    
+    
+
+
+</body>
+</html>
+
